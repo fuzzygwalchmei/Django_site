@@ -26,7 +26,7 @@ def blog_category(request, category):
 
 
 def blog_detail(request, pk):
-    post = Post.object.get(pk=pk)
+    post = Post.objects.get(pk=pk)
 
     form = CommentForm()
     if request.method == 'POST':
